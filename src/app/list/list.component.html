@@ -1,0 +1,16 @@
+
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header *ngFor="let user of userArr;let i=index" #exppanel (click)="exppanel._toggle()">
+        <mat-panel-title>{{i+1}}</mat-panel-title>
+        <mat-panel-description>{{user.firstName}}</mat-panel-description>
+        <mat-panel-description>{{user.lastName}}</mat-panel-description>
+        <mat-panel-description>{{user.email}}</mat-panel-description>
+        <mat-panel-description>{{user.age}}</mat-panel-description>
+        <mat-panel-description>{{user.mobile}}</mat-panel-description>
+        <mat-panel-description>{{user.phone}}</mat-panel-description>
+        <mat-icon (click)="updateUserWithService(user)">edit</mat-icon>
+        <mat-icon (click)="deleteUser(i)">delete</mat-icon>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>

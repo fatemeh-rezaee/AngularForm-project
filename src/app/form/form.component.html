@@ -1,0 +1,52 @@
+<form class="container" [formGroup]="profileForm" (ngSubmit)="onSubmit()" #userChange>
+    <div class="row">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>نام</mat-label>
+              <input matInput placeholder="نام را وارد کنید ..."  formControlName="firstName" #newItem>
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>نام خانوادگی</mat-label>
+              <input matInput placeholder="نام خانوادگی را وارد کنید ..."  formControlName="lastName">
+            </mat-form-field>
+          </p>
+    </div>
+    <div class="row">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>ایمیل</mat-label>
+              <input matInput placeholder="ایمیل را وارد کنید ..." formControlName="email">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>سن</mat-label>
+              <input matInput placeholder="سن را وارد کنید ..."  formControlName="age">
+            </mat-form-field>
+          </p>
+    </div>
+    <div class="row">
+        <p>
+            <mat-form-field appearance="outline">
+              <mat-label>تلفن همراه</mat-label>
+              <input matInput placeholder="تلفن همراه را وارد کنید ..."  formControlName="mobile">
+            </mat-form-field>
+          </p>
+          <p>
+            <mat-form-field appearance="outline">
+              <mat-label>تلفن ثابت</mat-label>
+              <input matInput placeholder="تلفن ثابت را وارد کنید ..." formControlName="phone">
+            </mat-form-field>
+          </p>
+    </div>
+    <button type="submit" mat-flat-button color="primary" routerLink="list" (click)="addUserWithService()">ذخیره</button>
+  
+   
+  </form>
+
+
+
+
+  <!-- <app-list [userArr]="userList" (userChange)="updateUser($event)"> -->
